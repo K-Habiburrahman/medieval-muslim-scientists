@@ -1,0 +1,6 @@
+{
+  "name": "Medieval Muslim Scientists and Their Inventions",
+  "description": "An ultra-premium cinematic educational interactive archive exploring the groundbreaking discoveries and inventions of the 20 greatest scientists of the Islamic Golden Age.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

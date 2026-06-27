@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:ital,wght@0,400;0,500;0,600;0,700;1,400&family=El+Messiri:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Pinyon+Script&family=Monsieur+La+Doulaise&family=Great+Vibes&family=Alex+Brush&family=Explora&family=Tangerine:wght@400;700&family=Parisienne&family=Allura&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Corbel", "Calibri", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-corbel: "Corbel", "Calibri", "Segoe UI", sans-serif;
+  --font-decorative: "Cinzel Decorative", Georgia, serif;
+  --font-arabic-style: "El Messiri", serif;
+  --font-script: "Pinyon Script", cursive;
+  --font-doulaise: "Monsieur La Doulaise", cursive;
+  --font-vibes: "Great Vibes", cursive;
+  --font-brush: "Alex Brush", cursive;
+  --font-explora: "Explora", cursive;
+  --font-tangerine: "Tangerine", cursive;
+  --font-parisienne: "Parisienne", cursive;
+  --font-allura: "Allura", cursive;
+
+  /* Scale up default Tailwind copy utilities */
+  --text-xs: 0.85rem;   /* normally 0.75rem (12px), updated to ~13.6px */
+  --text-sm: 0.95rem;   /* normally 0.875rem (14px), updated to ~15.2px */
+  --text-base: 1.06rem; /* normally 1rem (16px), updated to ~17px */
+}
+
+/* Global design override to scale up general elements other than headings and enforce premium Corbel typography */
+p, 
+li, 
+td,
+a,
+span:not(.text-xl):not(.text-2xl):not(.text-3xl):not(.text-4xl):not(.text-5xl):not(.text-6xl):not(.text-7xl):not([class*="font-mono"]):not([class*="font-serif"]):not([class*="font-decorative"]):not([class*="font-arabic-style"]),
+input,
+textarea,
+button:not([class*="font-mono"]):not([class*="font-serif"]):not([class*="font-decorative"]) {
+  font-family: "Corbel", "Calibri", "Segoe UI", sans-serif !important;
+  font-size: 1.05em;
+  letter-spacing: 0.015em;
+}
+
+/* Custom CSS helper utility declarations for easy font selection */
+.font-decorative {
+  font-family: "Cinzel Decorative", Georgia, serif;
+}
+
+.font-arabic-style {
+  font-family: "El Messiri", serif;
+}
+
+.font-corbel {
+  font-family: "Corbel", "Calibri", "Segoe UI", sans-serif;
+}
+
+.font-script {
+  font-family: "Pinyon Script", cursive;
+}
+
+.font-doulaise {
+  font-family: "Monsieur La Doulaise", cursive;
+}
+
+.font-vibes {
+  font-family: "Great Vibes", cursive;
+}
+
+.font-brush {
+  font-family: "Alex Brush", cursive;
+}
+
+.font-explora {
+  font-family: "Explora", cursive;
+}
+
+.font-tangerine {
+  font-family: "Tangerine", cursive;
+}
+
+.font-parisienne {
+  font-family: "Parisienne", cursive;
+}
+
+.font-allura {
+  font-family: "Allura", cursive;
+}
+
+/* Custom Webkit scrollbar for premium dark-mode feeling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020B08;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+/* Custom animation configurations */
+.animate-spin-slow {
+  animation: spin 15s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Additional glassmorphism and atmospheric styles */
+.glow-gold {
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
+}
+
+.glow-mint {
+  text-shadow: 0 0 12px rgba(152, 255, 152, 0.35);
+}
